@@ -99,3 +99,39 @@
 .main_four:hover {
   transform: rotate(360deg);
 }
+
+/* container div */
+
+.container {
+  width: 1700px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.container span {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 32px;
+
+  font-variant: small-caps;
+  font-weight: bolder;
+  font-style: italic;
+  animation-name: ashraf;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes ashraf {
+  0% {
+    font-size: 32px;
+  }
+  50% {
+    font-size: 16px;
+  }
+  100% {
+    font-size: 32px;
+  }
+}
