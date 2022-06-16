@@ -17,31 +17,74 @@ body {
   font-variant: small-caps;
   padding: 5px 0px 5px 0px;
   border-radius: 29px;
+  animation-name: ash;
+  animation-timing-function: ease;
+  animation-iteration-count: 2;
+  animation-duration: 3s;
 }
+
+@keyframes ash {
+  0% {
+    font-size: 17px;
+  }
+  50% {
+    font-size: 10px;
+  }
+  100% {
+    font-size: 17px;
+  }
+}
+
 @media only screen and (min-width: 920px) {
   .header {
     font-size: 17px;
+  }
+  .gridcontainersecond p {
   }
 }
 @media only screen and (min-width: 620px) and (max-width: 919px) {
   .header {
     font-size: 14px;
   }
+  .gridcontainersecond p {
+    font-size: 4px;
+  }
 }
 @media only screen and (max-width: 619px) {
   .header {
-    font-size: 10px;
+    font-size: 9px;
+  }
+  .gridcontainersecond p {
+    font-size: 7px;
   }
 }
 
 /* grid */
 
 .gridcontainer {
-  width: 100%;
-  display: grid;
-  grid-gap: 16px;
-  margin-top: 50px;
-  grid-template-columns: repeat(4, 1fr);
+  width: 500px;
+  margin-top: 50px !important;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1280px) {
+  .gridcontainer {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 620px) and (max-width: 1280px) {
+  .gridcontainer {
+    width: 400px;
+    font-size: 2px;
+  }
+}
+@media only screen and (max-width: 619px) {
+  .gridcontainer {
+    width: 300px;
+  }
+  .gridcontainer P {
+    font-size: 9px;
+  }
 }
 
 .gridcontainer div img {
@@ -55,6 +98,7 @@ body {
   font-weight: bold;
   font-variant: small-caps;
   padding: 15px 0px 15px 0px;
+  text-align: justify;
 }
 
 .card {
@@ -94,5 +138,59 @@ body {
 
 .child2,
 .child3,
-.child4 {
+.child4,
+.child5 {
+  background-color: lightgoldenrodyellow;
+  box-shadow: 0px 0px 8px 3px black inset;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.child2:hover {
+  transform: scale(90%);
+}
+.child3:hover {
+  transform: scale(90%);
+}
+.child4:hover {
+  transform: scale(90%);
+}
+.child5:hover {
+  transform: scale(90%);
+}
+.gridcontainersecond {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 16px;
+}
+
+.gridcontainersecond > div > img {
+  width: 100%;
+}
+
+.gridcontainersecond > div > p {
+  font-size: 16px;
+  font-family: arial;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  padding: 15px 0px 15px 0px;
+  text-align: justify;
+  word-spacing: 1px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .gridcontainersecond {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 620px) and (max-width: 1024px) {
+  .gridcontainersecond {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 619px) {
+  .gridcontainersecond {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
