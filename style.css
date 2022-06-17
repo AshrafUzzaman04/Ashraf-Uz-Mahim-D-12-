@@ -18,7 +18,7 @@ body {
   border-radius: 29px;
   animation-name: ash;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
+  animation-iteration-count: 2;
   animation-duration: 1s;
   text-align: center;
 }
@@ -40,23 +40,15 @@ body {
   .header {
     font-size: 17px;
   }
-  .gridcontainersecond p {
-  }
 }
 @media only screen and (min-width: 620px) and (max-width: 919px) {
   .header {
     font-size: 14px;
   }
-  .gridcontainersecond p {
-    font-size: 4px;
-  }
 }
 @media only screen and (max-width: 619px) {
   .header {
     font-size: 9px;
-  }
-  .gridcontainersecond p {
-    font-size: 7px;
   }
 }
 
@@ -66,7 +58,8 @@ body {
   width: 500px;
   margin-top: 50px !important;
   margin: auto;
-  grid-template-rows: repeat(1, 1fr);
+
+  cursor: url(./image/olivegreen-cursor.png), auto;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -148,21 +141,22 @@ body {
   transition: 0.5s;
 }
 .child2:hover {
-  transform: scale(90%);
+  transform: scale(85%);
 }
 .child3:hover {
-  transform: scale(90%);
+  transform: scale(85%);
 }
 .child4:hover {
-  transform: scale(90%);
+  transform: scale(85%);
 }
 .child5:hover {
-  transform: scale(90%);
+  transform: scale(85%);
 }
 .gridcontainersecond {
   margin-top: 50px;
   display: grid;
   grid-gap: 16px;
+  cursor: url(./image/olivegreen-cursor.png), auto;
 }
 
 .gridcontainersecond > div > img {
@@ -183,15 +177,18 @@ body {
 @media only screen and (min-width: 1025px) {
   .gridcontainersecond {
     grid-template-columns: repeat(4, 1fr);
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 620px) and (max-width: 1024px) {
   .gridcontainersecond {
     grid-template-columns: repeat(2, 1fr);
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 619px) {
   .gridcontainersecond {
     grid-template-columns: repeat(1, 1fr);
+    font-size: 7px;
   }
 }
