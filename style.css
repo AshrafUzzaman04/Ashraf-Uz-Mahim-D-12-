@@ -65,19 +65,16 @@ body {
 @media only screen and (min-width: 1280px) {
   .gridcontainer {
     width: 500px;
-    grid-template-rows: repeat(1, 1fr);
   }
 }
 @media only screen and (min-width: 620px) and (max-width: 1280px) {
   .gridcontainer {
     width: 400px;
-    grid-template-rows: repeat(1, 1fr);
   }
 }
 @media only screen and (max-width: 619px) {
   .gridcontainer {
     width: 300px;
-    grid-template-rows: repeat(1, 1fr);
   }
 }
 
@@ -141,13 +138,13 @@ body {
   transition: 0.5s;
 }
 .child2:hover {
-  transform: scale(85%);
+  transform: scale(90%);
 }
 .child3:hover {
-  transform: scale(85%);
+  transform: scale(90%);
 }
 .child4:hover {
-  transform: scale(85%);
+  transform: scale(90%);
 }
 .child5:hover {
   transform: scale(85%);
@@ -183,13 +180,11 @@ body {
 @media only screen and (min-width: 620px) and (max-width: 1024px) {
   .gridcontainersecond {
     grid-template-columns: repeat(2, 1fr);
-    font-size: 10px;
   }
 }
 @media only screen and (max-width: 619px) {
   .gridcontainersecond {
     grid-template-columns: repeat(1, 1fr);
-    font-size: 7px;
   }
 }
 
@@ -249,4 +244,93 @@ body {
   background: linear-gradient(to right, #353535, #978600, #353535);
   color: lightgoldenrodyellow;
   transform: translateY(-50%);
+}
+
+@media only screen and (min-width: 920px) {
+  .msgbox {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 620px) and (max-width: 919px) {
+  .msgbox {
+    width: 300px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 619px) {
+  .msgbox {
+    width: 200px;
+    font-size: 9px;
+  }
+}
+
+/* flip box */
+
+.ashraf {
+  width: 100%;
+
+  display: flex;
+  margin: 50px 0px !important;
+}
+.ashchild {
+  width: 300px;
+  height: 450px;
+
+  margin: auto !important;
+  position: relative;
+}
+
+@media only screen and (min-width: 920px) {
+  .ashchild {
+    width: 300px;
+    height: 450px;
+  }
+}
+@media only screen and (min-width: 620px) and (max-width: 919px) {
+  .ashchild {
+    width: 200px;
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 619px) {
+  .ashchild {
+    width: 150px;
+    height: 300px;
+  }
+}
+
+.ashchild::before {
+  content: "";
+  background-image: url(./image/WhatsApp\ Image\ 2022-06-03\ at\ 5.58.00\ PM.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-position: center;
+  transition: 0.5s;
+}
+.ashchild::after {
+  content: "";
+  background-image: url(./image/WhatsApp\ Image\ 2022-06-01\ at\ 10.10.42\ PM.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-position: center;
+  transition: 0.5s;
+  transform: rotateY(180deg);
+}
+.ashchild:hover::before {
+  transform: rotateY(180deg);
+}
+.ashchild:hover::after {
+  transform: rotateY(0deg);
 }
